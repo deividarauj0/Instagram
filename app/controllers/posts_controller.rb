@@ -3,6 +3,9 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
+    flash.now[:notice] = "Certinho!!!"
+    flash.now[:error] = "Errado meu Sr!!!"
+    flash.now[:alert] = "Errado meu Sr!!!"
     @posts = Post.all
   end
 
