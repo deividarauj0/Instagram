@@ -56,3 +56,10 @@ main {
   font-weight: bold;
   font-size: 14px;
 }
+
+.politic_privacity {
+  border-bottom: none;
+  text-align: center;
+  font-size: 12px;
+  color: #737373;
+}

@@ -1,29 +1,38 @@
-<h2>Sign up</h2>
+<h2>Criar conta</h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Nome completo' %>
   </div>
 
   <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <%= f.text_field :username, autocomplete: "username", placeholder: 'Nome de usuário' %>
   </div>
 
   <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+    <%= f.email_field :email, autocomplete: "email", placeholder: "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password, autocomplete: "new-password", placeholder: "Nova senha" %>
+  </div>
+
+  <div class="field">
+    <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "Confirmar senha" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Cadastrar" %>
   </div>
 <% end %>
+
+<div class="politic_privacity">
+  As pessoas que usam nosso serviço podem ter <br> enviado suas informações   de contato para o <br> Instagram. <%= link_to "Saiba mais" %>
+  <br>
+  <br>
+  Ao se cadastrar, você concorda com nossos <br> <%= link_to "Termos, Política de Privacidade" %> e <%= link_to "Política de" %> <br> <%= link_to "Cookies." %>
+</div>
 
 <%= render "devise/shared/links" %>
