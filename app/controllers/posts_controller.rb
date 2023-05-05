@@ -1,5 +1,8 @@
 class PostsController < ApplicationController
+  include SuggestedUsers
+    
   before_action :set_post, only: %i[ show ]
+  before_action :set_suggested_users, only: %i[index]
 
   # GET /posts or /posts.json
   def index
