@@ -8,6 +8,7 @@ import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 
 import  "../src/application.css"
+import "./modal"
 
 import "./flashMessages"
 
