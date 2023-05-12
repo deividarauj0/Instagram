@@ -6,7 +6,7 @@ class PostsController < ApplicationController
 
   # GET /posts or /posts.json
   def index
-    @posts = Post.all
+    @posts = Post.order(created_at:  :desc)
   end
 
   # GET /posts/1 or /posts/1.json
@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     @post = Post.new(post_params.merge(created_by: current_user))
 
     if @post.save
-      redirect_to post_url(@post), notice: "Post criado com sucesso."
+      redirect_to posts_url, notice: "Post criado com sucesso."
     else
       render :new, status: :unprocessable_entity
     end
