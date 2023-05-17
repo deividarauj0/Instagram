@@ -9,7 +9,7 @@
 
   <div class="help-link">
     <%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-      Esqueceu a senha?<%= link_to "Cadastre-se", new_password_path(resource_name) %>
+      Esqueceu a senha?<%= link_to "Recuperar senha", new_password_path(resource_name) %>
     <% end %>
   </div>
 
