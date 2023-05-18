@@ -51,3 +51,5 @@ gem "devise", "~> 4.9"
 gem "devise-i18n", "~> 1.11"
 
 gem "letter_opener", "~> 1.8"
+
+gem "active_storage_validations", "~> 1.0"

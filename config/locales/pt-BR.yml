@@ -20,4 +20,9 @@ pt-BR:
       password: "Senha"
       password_confirmation: "Confirme a senha"
 
+  errors:
+    messages:
+      content_type_invalid: "tipo de arquivo não suportado"
+      file_size_out_of_range: "tem %{file_size}, limite de 5 MB"
+
 
